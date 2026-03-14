@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="Es">
+
+<head>
+  <!-- meta -->
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="./favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="./favicon/favicon.svg" />
+  <link rel="shortcut icon" href="./favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png" />
+  <link rel="manifest" href="./favicon/site.webmanifest" />
+
+  <!-- style -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25/build/css/intlTelInput.css">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- title -->
+  <title>¡Vamos a tomar unas cervezas!</title>
+
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero__content">
+        <div class="hero__logo">
+          <img width="264" height="67" src="./img/logo.png" alt="CuatroBet">
+        </div>
+        <h1 class="hero__title">
+          ¡Vamos a tomar<br> unas cervezas!
+        </h1>
+      </div>
+
+      <div class="register">
+        <div class="register__header">
+          <h2 class="register__title">Registrate</h2>
+          <a class="register__support" href="https://cuatrobet.com/es/support" target="_blank"
+            rel="noopener noreferrer"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M6.09436 11.2288C6.03221 10.8282 5.99996 10.4179 5.99996 10C5.99996 5.58172 9.60525 2 14.0526 2C18.4999 2 22.1052 5.58172 22.1052 10C22.1052 10.9981 21.9213 11.9535 21.5852 12.8345C21.5154 13.0175 21.4804 13.109 21.4646 13.1804C21.4489 13.2512 21.4428 13.301 21.4411 13.3735C21.4394 13.4466 21.4493 13.5272 21.4692 13.6883L21.8717 16.9585C21.9153 17.3125 21.9371 17.4895 21.8782 17.6182C21.8266 17.731 21.735 17.8205 21.6211 17.8695C21.4911 17.9254 21.3146 17.8995 20.9617 17.8478L17.7765 17.3809C17.6101 17.3565 17.527 17.3443 17.4512 17.3448C17.3763 17.3452 17.3245 17.3507 17.2511 17.3661C17.177 17.3817 17.0823 17.4172 16.893 17.4881C16.0097 17.819 15.0524 18 14.0526 18C13.6344 18 13.2237 17.9683 12.8227 17.9073M7.63158 22C10.5965 22 13 19.5376 13 16.5C13 13.4624 10.5965 11 7.63158 11C4.66668 11 2.26316 13.4624 2.26316 16.5C2.26316 17.1106 2.36028 17.6979 2.53955 18.2467C2.61533 18.4787 2.65322 18.5947 2.66566 18.6739C2.67864 18.7567 2.68091 18.8031 2.67608 18.8867C2.67145 18.9668 2.65141 19.0573 2.61134 19.2383L2 22L4.9948 21.591C5.15827 21.5687 5.24 21.5575 5.31137 21.558C5.38652 21.5585 5.42641 21.5626 5.50011 21.5773C5.5701 21.5912 5.67416 21.6279 5.88227 21.7014C6.43059 21.8949 7.01911 22 7.63158 22Z"
+                stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg></a>
+        </div>
+
+        <form class="register-form" id="registerForm" novalidate>
+          <button type="button" class="bonus-select" id="openBonusModal">
+            <div class="bonus-select__left">
+              <div class="bonus-select__icon">
+                <img id="selectedBonusImage" src="./img/bonus-icon-2.webp" alt="Bonus" width="32" height="32">
+              </div>
+
+              <div class="bonus-select__content">
+                <div class="bonus-select__label">Bono de Bienvenida para Slotsde Casino</div>
+                <div class="bonus-select__value" id="selectedBonusText">
+                  Bono de Slots de hasta el 150% + 60 FS con tu primer depósito
+                </div>
+              </div>
+            </div>
+
+            <span class="bonus-select__arrow">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 15L12 20L17 15M7 9L12 4L17 9" stroke="#444448" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+          </button>
+
+          <div class="form-field form-field--phone">
+            <div class="form-field__phone">
+              <div class="phone-flag">
+                <img src="https://flagcdn.com/w40/ar.png" alt="Argentina" width="24" height="18">
+              </div>
+
+              <div class="phone-box">
+                <input type="tel" name="phone" id="phone" placeholder="+54 (XXX) XXX-XXXX" autocomplete="tel" required>
+                <label for="phone">Número de teléfono</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <div class="field-box">
+              <input type="email" name="email" id="email" placeholder=" " required>
+              <label for="email">Correo electrónico</label>
+            </div>
+          </div>
+
+          <div class="form-field form-field--password">
+            <div class="field-box password-wrap">
+              <input type="password" name="password" id="password" placeholder=" " minlength="6" required>
+              <label for="password">Contraseña</label>
+
+              <button type="button" class="password-toggle" id="togglePassword" aria-label="Mostrar contraseña">
+                <svg class="icon-eye" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 12C3.8 8.5 7.3 6 12 6C16.7 6 20.2 8.5 22 12C20.2 15.5 16.7 18 12 18C7.3 18 3.8 15.5 2 12Z"
+                    stroke="white" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+                  <circle cx="12" cy="12" r="3" stroke="white" stroke-width="1.7" />
+                </svg>
+              </button>
+            </div>
+
+            <div class="password-info" id="passwordInfo">
+              <span class="password-info__icon" id="passwordInfoIcon"></span>
+              <span class="password-info__text">Al menos 6 caracteres</span>
+            </div>
+          </div>
+
+          <div class="form-agreement" id="agreementField">
+            <label class="agreement-check">
+              <span class="agreement-check__text">
+                Tengo más de 18 años y acepto
+                <a href="https://cuatrobet.com/terms-and-conditions" target="_blank" rel="noopener noreferrer">
+                  el acuerdo con el contrato de oferta para la moneda elegida
+                </a>
+              </span>
+              <input type="checkbox" id="agreement" name="agreement" checked>
+              <span class="agreement-check__box"></span>
+            </label>
+          </div>
+
+          <div class="register-form__submit">
+            <button type="submit" class="btn-submit" id="submitBtn" disabled>
+              Registrarse
+            </button>
+          </div>
+
+          <div class="register-form__authorization">
+            <p>¿Ya tienes una cuenta? <a href="https://cuatrobet.com/login" target="_blank"
+                rel="noopener noreferrer">Iniciar sesión</a></p>
+          </div>
+        </form>
+      </div>
+
+
+
+    </div>
+  </section>
+
+  <div class="bonus-modal" id="bonusModal" hidden>
+    <div class="bonus-modal__overlay" id="bonusModalOverlay"></div>
+
+    <div class="bonus-modal__dialog">
+      <div class="bonus-modal__head">
+        <div class="bonus-modal__content">
+          <div class="bonus-modal__title">¿Aún no lo has elegido?</div>
+          <div class="bonus-modal__subtitle">Ofrecemos un bono para el primer depósito de la cuenta</div>
+        </div>
+
+        <button type="button" class="bonus-modal__close" id="closeBonusModal" aria-label="Cerrar">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="bonus-list">
+        <button type="button" class="bonus-card is-active"
+          data-bonus="Bono de Slots de hasta el 150% + 60 FS con tu primer depósito">
+          <div class="bonus-card__icon">
+            <img src="./img/bonus-icon-1.webp" alt="Bonus" width="32" height="32">
+          </div>
+
+          <div class="bonus-card__content">
+            <div class="bonus-card__small">Bono de Bienvenida para Slots de Casino</div>
+            <div class="bonus-card__title">🎰 Bono de Slots de hasta el 150% + 60 FS con tu primer depósito</div>
+          </div>
+
+          <span class="bonus-card__check"></span>
+        </button>
+
+        <button type="button" class="bonus-card"
+          data-bonus="Obtén un Bono de Bienvenida para Deportes de hasta el 120% con tu primer depósito">
+          <div class="bonus-card__icon">
+            <img src="./img/bonus-icon-2.webp" alt="Bonus" width="32" height="32">
+          </div>
+
+          <div class="bonus-card__content">
+            <div class="bonus-card__small">Bono de Bienvenida para Deportes</div>
+            <div class="bonus-card__title">⚽️ Obtén un Bono de Bienvenida para Deportes de hasta el 120% con tu
+              primer depósito</div>
+          </div>
+
+          <span class="bonus-card__check"></span>
+        </button>
+
+        <button type="button" class="bonus-card"
+          data-bonus="Bono de Casino en Vivo de hasta el 150% con tu primer depósito">
+          <div class="bonus-card__icon">
+            <img src="./img/bonus-icon-3.webp" alt="Bonus" width="32" height="32">
+          </div>
+
+          <div class="bonus-card__content">
+            <div class="bonus-card__small">Bono de Bienvenida para Casino en Vivo</div>
+            <div class="bonus-card__title">👑 Bono de Casino en Vivo de hasta el 150% con tu primer depósito</div>
+          </div>
+
+          <span class="bonus-card__check"></span>
+        </button>
+      </div>
+
+      <div class="bonus-modal__footer">
+        <p>Al elegir un bono, confirmas que has leído y aceptas las políticas del <a href="https://cuatrobet.com/#" target="_blank" rel="noopener noreferrer">Bono deportivo</a>, del <a href="https://cuatrobet.com/#" target="_blank" rel="noopener noreferrer">Bono de casino</a> y del <a href="https://cuatrobet.com/#" target="_blank" rel="noopener noreferrer">Bono de Casino en Vivo</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25/build/js/intlTelInput.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/inputmask@5/dist/inputmask.min.js"></script>
+  <script src="./js/script.js" defer></script>
+
+</body>
+
+</html>
