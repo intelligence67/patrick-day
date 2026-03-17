@@ -17,7 +17,6 @@
   <link rel="manifest" href="./favicon/site.webmanifest" />
 
   <!-- style -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25/build/css/intlTelInput.css">
   <link rel="stylesheet" href="./css/style.css">
 
   <!-- title -->
@@ -31,7 +30,7 @@
     <div class="container">
       <div class="hero__content">
         <div class="hero__logo">
-          <img width="264" height="67" src="./img/logo.svg" alt="CuatroBet">
+          <img width="264" height="67" src="./img/logo.svg" alt="CuatroBet" class="brand__logo">
         </div>
         <h1 class="hero__title">
           ¡Vamos a tomar<br> unas cervezas!
@@ -50,7 +49,11 @@
             </svg></a>
         </div>
 
-        <form class="register-form" id="registerForm" novalidate>
+        <form class="register-form" id="register-form" novalidate>
+          <input type="hidden" name="selectedBonus" id="selected-bonus-input" value="sports">
+          <input type="hidden" name="nnBonus" id="selected-bonus-code" value="2">
+          <input type="hidden" name="selectedLanguage" value="es">
+          <input type="hidden" name="defaultCurrency" value="ARS">
           <button type="button" class="bonus-select" id="openBonusModal">
             <div class="bonus-select__left">
               <div class="bonus-select__icon">
@@ -128,7 +131,9 @@
           </div>
 
           <div class="register-form__submit">
-            <button type="submit" class="btn-submit" id="submitBtn" disabled>
+            <p class="register-form__error" id="register-form-error" role="alert" hidden></p>
+
+            <button type="submit" class="btn-submit" id="submitBtn">
               Registrarse
             </button>
           </div>
@@ -169,6 +174,8 @@
 
       <div class="bonus-list">
         <button type="button" class="bonus-card is-active"
+          data-bonus-id="casino"
+          data-nn-bonus="1"
           data-bonus="Bono de Slots de hasta el 150% + 60 FS con tu primer depósito">
           <div class="bonus-card__icon">
             <img src="./img/bonus-icon-1.webp" alt="Bonus" width="32" height="32">
@@ -183,6 +190,8 @@
         </button>
 
         <button type="button" class="bonus-card"
+          data-bonus-id="sports"
+          data-nn-bonus="2"
           data-bonus="Obtén un Bono de Bienvenida para Deportes de hasta el 120% con tu primer depósito">
           <div class="bonus-card__icon">
             <img src="./img/bonus-icon-2.webp" alt="Bonus" width="32" height="32">
@@ -198,6 +207,8 @@
         </button>
 
         <button type="button" class="bonus-card"
+          data-bonus-id="live"
+          data-nn-bonus="3"
           data-bonus="Bono de Casino en Vivo de hasta el 150% con tu primer depósito">
           <div class="bonus-card__icon">
             <img src="./img/bonus-icon-3.webp" alt="Bonus" width="32" height="32">
@@ -218,9 +229,7 @@
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@25/build/js/intlTelInput.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/inputmask@5/dist/inputmask.min.js"></script>
-  <script src="./js/script.js" defer></script>
+  <script type="module" src="./js/script.js"></script>
 
 </body>
 
