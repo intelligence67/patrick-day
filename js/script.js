@@ -5,7 +5,7 @@ const AR_LOCAL_PHONE_LENGTH = 10;
 const FINGERPRINT_SCRIPT_URL = 'https://openfpcdn.io/fingerprintjs/v4';
 
 const readEnv = (key, fallback) => {
-  const value = import.meta.env[key];
+  const value = typeof import.meta !== 'undefined' && import.meta.env ? import.meta.env[key] : undefined;
   return typeof value === 'string' && value.trim() ? value.trim() : fallback;
 };
 
