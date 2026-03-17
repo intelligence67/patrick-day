@@ -288,11 +288,12 @@ const submitRegistrationDirect = async (payload) => {
   window.location.assign(buildRedirectUrl(redirectDomain, payload.nnBonus || '1'));
 };
 
-document.addEventListener('DOMContentLoaded', () => {
+const initRegistrationForm = () => {
   const form = document.getElementById('register-form');
-  if (!form) {
+  if (!form || form.dataset.patricioInitialized === 'true') {
     return;
   }
+  form.dataset.patricioInitialized = 'true';
 
   const phoneInput = document.getElementById('phone');
   const emailInput = document.getElementById('email');
@@ -731,4 +732,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   updatePasswordHint();
   validateForm(false);
-});
+};
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initRegistrationForm, { once: true });
+} else {
+  initRegistrationForm();
+}
